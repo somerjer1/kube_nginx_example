@@ -16,7 +16,7 @@ spec:
       - name: my-nginx
         image: nginx
         ports:
-        - containerPort: 8080
+        - containerPort: 80
 
 ---
 apiVersion: v1
@@ -27,7 +27,7 @@ metadata:
     run: my-nginx
 spec:
   ports:
-  - port: 80
+  - port: 8080
     protocol: TCP
   selector:
     run: my-nginx
